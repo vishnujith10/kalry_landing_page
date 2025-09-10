@@ -5,20 +5,38 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#6D28D9" />
-    <meta name="description" content="Kalry - Your Personal Wellness Hub. Track your fitness, nutrition, sleep, and wellness journey with AI-powered insights." />
-    <meta name="keywords" content="fitness app, wellness tracker, health app, workout tracker, nutrition app, sleep tracker" />
+    <meta
+      name="description"
+      content="Kalry - Your Personal Wellness Hub. Track your fitness, nutrition, sleep, and wellness journey with AI-powered insights."
+    />
+    <meta
+      name="keywords"
+      content="fitness app, wellness tracker, health app, workout tracker, nutrition app, sleep tracker"
+    />
     <meta name="author" content="Kalry" />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Kalry - Your Personal Wellness Hub" />
-    <meta property="og:description" content="Track your fitness, nutrition, sleep, and wellness journey with AI-powered insights." />
+    <meta
+      property="og:title"
+      content="Kalry - Your Personal Wellness Hub"
+    />
+    <meta
+      property="og:description"
+      content="Track your fitness, nutrition, sleep, and wellness journey with AI-powered insights."
+    />
     <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Kalry - Your Personal Wellness Hub" />
-    <meta property="twitter:description" content="Track your fitness, nutrition, sleep, and wellness journey with AI-powered insights." />
+    <meta
+      property="twitter:title"
+      content="Kalry - Your Personal Wellness Hub"
+    />
+    <meta
+      property="twitter:description"
+      content="Track your fitness, nutrition, sleep, and wellness journey with AI-powered insights."
+    />
     <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png" />
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
@@ -27,81 +45,41 @@
     <!-- Preconnect to Google Fonts for better performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Google Fonts - Lexend and Manrope -->
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&family=Manrope:wght@400;500;700;900&display=swap" 
-      rel="stylesheet"
-    />
-    
-    <!-- Material Symbols Outlined Icons -->
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" 
-      rel="stylesheet"
-    />
-    
-    <!-- Tailwind CSS CDN (for development - replace with build version for production) -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    
-    <!-- Tailwind Config Script -->
-    <script>
-      tailwind.config = {
-        darkMode: ['class', '[data-theme="dark"]'],
-        theme: {
-          extend: {
-            fontFamily: {
-              'lexend': ['Lexend', 'sans-serif'],
-              'manrope': ['Manrope', 'sans-serif'],
-            },
-            colors: {
-              'kalry': {
-                'purple': '#6D28D9',
-                'bg': '#F8F7FC',
-                'text': '#1C161F',
-                'muted': '#4A4458',
-              }
-            },
-            animation: {
-              'scroll': 'scroll 10s infinite linear',
-              'float': 'float 8s ease-in-out infinite',
-            },
-            keyframes: {
-              scroll: {
-                '0%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-                '100%': { transform: 'translateY(0)' },
-              },
-              float: {
-                '0%': { transform: 'translateY(0px) translateX(0px)' },
-                '50%': { transform: 'translateY(-20px) translateX(20px)' },
-                '100%': { transform: 'translateY(0px) translateX(0px)' },
-              },
-            }
-          }
-        }
-      }
-    </script>
 
-    <!-- Custom CSS Variables and Base Styles -->
+    <!-- Google Fonts - Lexend and Manrope -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&family=Manrope:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Symbols Outlined Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+
+    <!-- CRA will automatically include compiled Tailwind CSS via index.css -->
+    <title>Kalry - Your Personal Wellness Hub</title>
+
     <style>
       :root {
-        --gradient-start: #E9D5FF;
-        --gradient-end: #A7F3D0;
-        --gradient-2-start: #FECDD3;
-        --gradient-2-end: #FBCFE8;
-        --bg: #F8F7FC;
-        --text: #1C161F;
-        --muted: #4A4458;
-        --glass-bg: rgba(255,255,255,0.1);
-        --glass-border: rgba(255,255,255,0.2);
+        --gradient-start: #e9d5ff;
+        --gradient-end: #a7f3d0;
+        --gradient-2-start: #fecdd3;
+        --gradient-2-end: #fbcfe8;
+        --bg: #f8f7fc;
+        --text: #1c161f;
+        --muted: #4a4458;
+        --glass-bg: rgba(255, 255, 255, 0.1);
+        --glass-border: rgba(255, 255, 255, 0.2);
       }
 
       [data-theme="dark"] {
-        --bg: #0E0B12;
-        --text: #ECEAF3;
-        --muted: #C7C2D4;
-        --glass-bg: rgba(255,255,255,0.08);
-        --glass-border: rgba(255,255,255,0.15);
+        --bg: #0e0b12;
+        --text: #eceaf3;
+        --muted: #c7c2d4;
+        --glass-bg: rgba(255, 255, 255, 0.08);
+        --glass-border: rgba(255, 255, 255, 0.15);
       }
 
       body {
@@ -117,39 +95,39 @@
         font-family: 'Lexend', sans-serif;
       }
 
-      /* Material Icons Configuration */
       .material-symbols-outlined {
         font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       }
-      
-      /* Prevent FOUC (Flash of Unstyled Content) */
+
       .loading {
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
       }
-      
+
       .loaded {
         opacity: 1;
       }
     </style>
-
-    <title>Kalry - Your Personal Wellness Hub</title>
   </head>
   <body>
     <noscript>
-      <div style="padding: 20px; text-align: center; font-family: Arial, sans-serif;">
+      <div
+        style="padding: 20px; text-align: center; font-family: Arial, sans-serif;"
+      >
         <h1>JavaScript Required</h1>
         <p>You need to enable JavaScript to run this app.</p>
-        <p>Kalry is a modern web application that requires JavaScript to function properly.</p>
+        <p>
+          Kalry is a modern web application that requires JavaScript to function
+          properly.
+        </p>
       </div>
     </noscript>
-    
+
     <div id="root" class="loading"></div>
-    
-    <!-- Loading Script -->
+
     <script>
       // Remove loading class once React app is loaded
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function () {
         const root = document.getElementById('root');
         if (root) {
           setTimeout(() => {
@@ -158,9 +136,9 @@
           }, 100);
         }
       });
-      
+
       // Theme persistence
-      (function() {
+      (function () {
         const savedTheme = localStorage.getItem('kalry-theme');
         if (savedTheme === 'dark') {
           document.documentElement.setAttribute('data-theme', 'dark');
