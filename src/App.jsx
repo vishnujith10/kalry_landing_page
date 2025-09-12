@@ -23,7 +23,6 @@ const Header = ({ activeSection, setActiveSection }) => {
         
         <div className="hidden md:flex items-center gap-8 text-base">
           <a className={`transition-colors duration-300 ${activeSection === 'features' ? 'active-link' : ''}`} href="#features">Features</a>
-          <a className={`transition-colors duration-300 ${activeSection === 'journey' ? 'active-link' : ''}`} href="#journey">Journey</a>
           <a className={`transition-colors duration-300 ${activeSection === 'testimonials' ? 'active-link' : ''}`} href="#testimonials">Testimonials</a>
           <a className={`transition-colors duration-300 ${activeSection === 'pricing' ? 'active-link' : ''}`} href="#pricing">Pricing</a>
         </div>
@@ -306,100 +305,9 @@ const PromoSection = () => {
 };
 
 // Journey Section Component
-const JourneySection = () => {
-  const milestones = [
-    {
-      week: "WEEK 1",
-      title: "Beginner's Boost",
-      status: "Completed!",
-      completed: true,
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAkkeJuYPjlVX5zJnDwuursp15bGxwAaN5-871J-23Adnl1bQooSQzitEERffV816mY8jitVTuBNVXZm5OZz7tKFB5JeVfNaYGXZkibnIZCJLy_C4jIutrpka6iY_GIn_agWtYl6g5_CzxoXSHt0nDrARRc21RZaQqgpFVx9RgKF4bVjhYro_y_4M22MetBc9BZTUJXmIBBAvTgndBKmfZThmJeEAkOy6DgHbihgl5CAClPePkEZ1fRS9cr-ZsISXarwGsspr8Tyhyx",
-      rightAlign: false
-    },
-    {
-      week: "WEEK 4",
-      title: "Strength Surge",
-      status: "Unlocked",
-      completed: true,
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDzA-qOtJlf92TatjPjAYdFovoX2GMn2e8hFtjwYlWrWmz1xOWgQCI57LRiAS7IlcuTf5S4bfkk8dPmVRG1ltyzHf1t2jCfKd1W1yvS7siZ8M-qk65s648H3FdLxtiTQWEUuGLgWxrh4MwkDUiBt7-Txu5YuRLvxoKRS-5VT-ScUe0mczfqnLov-M84As1RVPEhOOR8DarsIwvamYAFqI5p42PuQoppXAD-oWjJFgOQzGDU2RBng2_c02wQPPlA22NGQosYEVIqrxr8",
-      rightAlign: true
-    },
-    {
-      week: "WEEK 8",
-      title: "Endurance Elevation",
-      status: "Current Focus",
-      completed: false,
-      rightAlign: false
-    }
-  ];
 
-  return (
-    <section id="journey" className="py-20">
-      <div className="container mx-auto px-6">
-        <div className="w-full max-w-2xl text-center mb-16 mx-auto">
-          <h2 className="font-lexend text-4xl md:text-5xl font-bold text-[#1C161F] tracking-tight">
-            Your Journey Map
-          </h2>
-          <p className="mt-4 text-lg text-[#4A4458]">
-            Track your progress and unlock rewards as you advance through your fitness journey.
-          </p>
-        </div>
-        
-        <div className="relative w-full max-w-md mx-auto">
-          <div className="absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2 bg-gradient-to-b from-[#E0C3FC]/40 via-[#A6C1EE]/40 to-transparent" />
-          
-          <div className="space-y-24">
-            {milestones.map((milestone, index) => (
-              <div key={index} className="relative flex items-center">
-                {!milestone.rightAlign ? (
-                  <>
-                    <div className="flex-1 text-right pr-12">
-                      <p className="text-sm font-semibold text-[#9942f0]">{milestone.week}</p>
-                      <h3 className="text-xl font-bold text-gray-800">{milestone.title}</h3>
-                      <p className="text-gray-500">{milestone.status}</p>
-                    </div>
-                    <div className={`absolute left-1/2 -translate-x-1/2 z-10 flex ${milestone.completed ? 'h-12 w-12' : 'h-16 w-16'} items-center justify-center rounded-full ${milestone.completed ? 'bg-gradient-to-br from-[#E0C3FC] to-[#8EC5FC]' : 'bg-white animate-pulse'} shadow-lg`}>
-                      {milestone.completed ? (
-                        <span className="material-symbols-outlined text-white">check</span>
-                      ) : (
-                        <div className="h-12 w-12 rounded-full bg-gradient-to-br from-[#FBC2EB] to-[#A6C1EE]" />
-                      )}
-                    </div>
-                    <div className="flex-1 pl-12">
-                      <div className={`glassmorphism h-32 w-full rounded-2xl p-4 flex items-center justify-center ${!milestone.completed ? 'opacity-50' : ''}`}>
-                        {milestone.imageUrl ? (
-                          <img className="h-20 w-20 object-contain" alt={`${milestone.title} Badge`} src={milestone.imageUrl} />
-                        ) : (
-                          <span className="material-symbols-outlined text-[#1C161F]" style={{fontSize: '2.5rem'}}>sports_gymnastics</span>
-                        )}
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="flex-1 pr-12">
-                      <div className="glassmorphism h-32 w-full rounded-2xl p-4 flex items-center justify-center">
-                        <img className="h-20 w-20 object-contain" alt={`${milestone.title} Badge`} src={milestone.imageUrl} />
-                      </div>
-                    </div>
-                    <div className="absolute left-1/2 -translate-x-1/2 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#E0C3FC] to-[#8EC5FC] shadow-lg">
-                      <span className="material-symbols-outlined text-white">check</span>
-                    </div>
-                    <div className="flex-1 pl-12 text-left">
-                      <p className="text-sm font-semibold text-[#9942f0]">{milestone.week}</p>
-                      <h3 className="text-xl font-bold text-gray-800">{milestone.title}</h3>
-                      <p className="text-gray-500">{milestone.status}</p>
-                    </div>
-                  </>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+  
+
 
 // Testimonials Section Component
 const TestimonialsSection = () => {
@@ -726,7 +634,6 @@ const App = () => {
           <FeaturesSection />
           <WhyKalrySection />
           <PromoSection />
-          <JourneySection />
           <TestimonialsSection />
           <PricingSection />
           <CTASection />
