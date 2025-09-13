@@ -433,28 +433,103 @@ const PricingSection = () => {
   );
 };
 
-// CTA Section Component
+// CTA Section Component with Contact Form
 const CTASection = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+    // You can add your form submission logic here
+    alert('Message sent successfully!');
+    // Reset form
+    setFormData({ name: '', email: '', message: '' });
+  };
+
   return (
     <section className="py-20 px-6">
-      <div className="max-w-4xl mx-auto text-center rounded-3xl p-10 md:p-16 relative overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl">
+      <div className="max-w-4xl mx-auto rounded-3xl p-10 md:p-16 relative overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl">
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
         <div className="relative z-10">
-          <h2 className="font-lexend text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-[#1C161F]">
-            Ready to take control?
-          </h2>
-          <p className="text-[#4A4458] text-lg mb-8 max-w-2xl mx-auto">
-            Join thousands of others who are transforming their lives with Kalry.
-          </p>
-          <button className="flex mx-auto min-w-[150px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-8 bg-white/20 backdrop-blur-md border border-white/30 text-gray-900 text-base font-bold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-white/30">
-            <span className="truncate">Get Started For Free</span>
-          </button>
+          <div className="text-center mb-8">
+            <h2 className="font-lexend text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-[#1C161F]">
+              Ready to take control?
+            </h2>
+            <p className="text-[#4A4458] text-lg max-w-2xl mx-auto">
+              Join thousands of others who are transforming their lives with Kalry.
+            </p>
+          </div>
+          
+          <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
+            <h3 className="font-lexend text-2xl font-bold text-[#1C161F] mb-6 ">Pre Register</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label className="block text-[#1C161F] font-semibold mb-2"><span className='imp'>*</span>Your Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  placeholder="Enter your name"
+                  required
+                  className="contact-input w-full px-4 py-3 rounded-xl border border-white/20 bg-white/50 backdrop-blur-sm text-[#1C161F] placeholder-[#4A4458] focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                />
+              </div>
+              <div>
+                <label className="block text-[#1C161F] font-semibold mb-2"><span className='imp'>*</span>Your Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="Enter your email"
+                  required
+                  className="contact-input w-full px-4 py-3 rounded-xl border border-white/20 bg-white/50 backdrop-blur-sm text-[#1C161F] placeholder-[#4A4458] focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                />
+              </div>
+            </div>
+            
+            {/* <div className="mb-6">
+              <label className="block text-[#1C161F] font-semibold mb-2">Write your message here</label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                placeholder="Enter your message"
+                rows="5"
+                required
+                className="contact-textarea w-full px-4 py-3 rounded-xl border border-white/20 bg-white/50 backdrop-blur-sm text-[#1C161F] placeholder-[#4A4458] focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 resize-vertical"
+              />
+            </div> */}
+            
+            <div className="">
+              <button
+                type="submit"
+                className="contact-submit  px-8 py-3 bg-gradient-to-r from-[#A855F7] to-[#7C3AED] text-white font-bold text-lg  shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
   );
 };
-
 
 // Footer Component
 const Footer = () => {

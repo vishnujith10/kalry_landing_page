@@ -169,7 +169,17 @@ p, li, small, span {
   border-radius: 2px; 
   opacity: 0.5; 
 }
-
+form{
+  border : 1px solid rgba(0, 0, 0, 0.171);
+  border-radius: 20px;
+  padding: 20px;
+}
+span.imp{
+  color : red;
+}
+.contact-submit{
+  border-radius: 15px;
+}
 .milestone { 
   position: relative; 
   padding-left: 40px; 
