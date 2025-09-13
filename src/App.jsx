@@ -246,66 +246,6 @@ const WhyKalrySection = () => {
   );
 };
 
-// Promo Section Component
-const PromoSection = () => {
-  return (
-    <section id="promo" className="py-10">
-      <div className="relative flex min-h-[50vh] w-full flex-col items-center justify-center overflow-hidden p-4">
-        <div className="blob1-hero" />
-        <div className="blob2-hero" />
-        <div className="promo-grid" />
-        
-        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center gap-12 rounded-3xl bg-gradient-to-br from-[#E0C3FC]/80 to-[#8EC5FC]/80 p-8 md:p-12 shadow-2xl md:flex-row promo-surface">
-          <div className="w-full max-w-xl flex-1 text-center md:text-left">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-lexend font-bold leading-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">
-                Elevate Your Fitness
-              </span>
-              <span className="block text-white/90">with Kalry</span>
-            </h2>
-            <p className="mt-4 text-base text-white/90 md:text-lg">
-              Track your progress, personalize workouts, and reach your goals with an experience that feels delightful every day.
-            </p>
-            
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row md:justify-start">
-              <a href="#" className="flex items-center gap-3 rounded-xl bg-black/80 px-5 py-3 text-white hover:bg-black transition">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" className="w-5 h-5" fill="currentColor">
-                  <path d="M318.7 268.7c-.5-37.4 16.7-65.7 51-86.6-19.2-27.9-48.2-43.3-86.7-46.3-36.4-2.9-76.1 21.3-90.6 21.3-15 0-50.2-20.6-77.8-20.6-57.3.9-118.4 41.8-118.4 124.8 0 27.3 5 55.6 15.1 84.9 13.4 37.4 61.8 128.8 112 127.1 26.4-.6 45.1-18.8 79.6-18.8 33.8 0 51.5 18.8 77.8 18.8 50.7-.8 95.9-84.7 108.9-122.1-69.3-32.7-80.9-96-80.9-101.5zM255.9 64.7c27.3-32.4 24.8-61.8 24-72.7-24.1 1.4-52 16.4-68.3 35.8-17.7 20.9-28.8 46.9-26.5 74.4 25.8 2 49.5-13 70.8-37.5z" />
-                </svg>
-                <span className="text-sm font-semibold">App Store</span>
-              </a>
-              <a href="#" className="flex items-center gap-3 rounded-xl bg-black/80 px-5 py-3 text-white hover:bg-black transition">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5" fill="currentColor">
-                  <path d="M325.3 234.3L104.6 13.7C98.3 7.4 88 11.9 88 20.8V491.2c0 8.9 10.3 13.4 16.6 7.1l220.7-220.7c9.4-9.4 9.4-24.6 0-33.9zM356.7 203l59.8-59.8C451.7 108 440.9 88 422.5 88H205.5L356.7 203zM205.5 424H422.5c18.4 0 29.2-20 17.1-35.2L356.7 329 205.5 424z" />
-                </svg>
-                <span className="text-sm font-semibold">Google Play</span>
-              </a>
-            </div>
-            
-            <div className="mt-6 flex items-center justify-center md:justify-start gap-3 text-white/80 text-sm">
-              <span className="material-symbols-outlined animate-glowing-arrow">arrow_forward</span>
-              <span>Download now — free to get started</span>
-            </div>
-          </div>
-          
-          <div className="relative flex-shrink-0" id="promo-phone">
-            <div className="absolute -top-6 -left-6 stat-chip rounded-2xl px-4 py-2 text-white text-sm shadow">
-              +1k daily streaks
-            </div>
-            <div className="absolute -bottom-6 -right-6 stat-chip rounded-2xl px-4 py-2 text-white text-sm shadow">
-              4.9★ rating
-            </div>
-            <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuABS1AUjB_Q8gsCHeEQIgGjatB68L49DWP9OrKZClt2CM_DUNjqzX3ILPZgpQwyxssvGSj_oCfzsNuVXpvg9Jz_BoouzVasK_Xouo8NaI-AJ2-_H3UcYokSgIFz4Ub__EI7un_UPfvERENmf9ADO2-UJl6sfcZRpnlAKN1XVq7B8FXiL2Vpqz9XbZDMdmuDraT4-zd1z7_wM3qGTaOX4ag43M4ZmWPIXWSyGKQRIHHnUdBH8Fjy3OG9EjK71N-8HW03VRdeVeCBloJX"
-              alt="Kalry App on a Phone" 
-              className="relative z-10 w-64 md:w-80 drop-shadow-2xl" 
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
 
 // Journey Section Component
 
@@ -515,18 +455,22 @@ const CTASection = () => {
   );
 };
 
+
 // Footer Component
 const Footer = () => {
   const footerLinks = ["About", "Blog", "Terms", "Privacy", "Contact"];
 
   return (
     <footer id="footer" className="w-full mt-2">
+      
       <div className="relative py-12 px-6 overflow-hidden">
         <div className="blob1-footer" />
         <div className="blob2-footer" />
         
         <div className="glassmorphism-container max-w-5xl mx-auto z-10">
           <div className="relative z-20 flex flex-col items-center gap-8 px-6 py-10 text-center">
+            
+            {/* Footer Navigation Links */}
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-base font-medium text-[#4B5563]">
               {footerLinks.map((link) => (
                 <a key={link} className="hover:text-[#1C161F] transition-colors" href="#">
@@ -535,20 +479,48 @@ const Footer = () => {
               ))}
             </div>
             
-            <div className="flex flex-wrap justify-center gap-6">
-              <a className="text-[#4B5563] hover:text-[#1C161F] transition-colors" href="#" aria-label="Twitter">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 256 256" fill="currentColor">
-                  <path d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z" />
+            {/* App Store Download Buttons */}
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <a href="#" className="flex items-center gap-3 rounded-xl bg-black/80 px-5 py-3 text-white hover:bg-black transition-all duration-300 transform hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" className="w-5 h-5" fill="currentColor">
+                  <path d="M318.7 268.7c-.5-37.4 16.7-65.7 51-86.6-19.2-27.9-48.2-43.3-86.7-46.3-36.4-2.9-76.1 21.3-90.6 21.3-15 0-50.2-20.6-77.8-20.6-57.3.9-118.4 41.8-118.4 124.8 0 27.3 5 55.6 15.1 84.9 13.4 37.4 61.8 128.8 112 127.1 26.4-.6 45.1-18.8 79.6-18.8 33.8 0 51.5 18.8 77.8 18.8 50.7-.8 95.9-84.7 108.9-122.1-69.3-32.7-80.9-96-80.9-101.5zM255.9 64.7c27.3-32.4 24.8-61.8 24-72.7-24.1 1.4-52 16.4-68.3 35.8-17.7 20.9-28.8 46.9-26.5 74.4 25.8 2 49.5-13 70.8-37.5z" />
                 </svg>
+                <div className="flex flex-col items-start">
+                  <span className="text-xs opacity-80">Download on the</span>
+                  <span className="text-sm font-semibold leading-tight">App Store</span>
+                </div>
               </a>
-              <a className="text-[#4B5563] hover:text-[#1C161F] transition-colors" href="#" aria-label="Instagram">
+              <a href="#" className="flex items-center gap-3 rounded-xl bg-black/80 px-5 py-3 text-white hover:bg-black transition-all duration-300 transform hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5" fill="currentColor">
+                  <path d="M325.3 234.3L104.6 13.7C98.3 7.4 88 11.9 88 20.8V491.2c0 8.9 10.3 13.4 16.6 7.1l220.7-220.7c9.4-9.4 9.4-24.6 0-33.9zM356.7 203l59.8-59.8C451.7 108 440.9 88 422.5 88H205.5L356.7 203zM205.5 424H422.5c18.4 0 29.2-20 17.1-35.2L356.7 329 205.5 424z" />
+                </svg>
+                <div className="flex flex-col items-start">
+                  <span className="text-xs opacity-80">Get it on</span>
+                  <span className="text-sm font-semibold leading-tight">Google Play</span>
+                </div>
+              </a>
+            </div>
+            
+            {/* Social Media Icons */}
+            <div className="flex flex-wrap justify-center gap-6">
+              {/* Snapchat */}
+              {/* <a className="social-icon text-[#4B5563] hover:text-[#FFFC00] transition-all duration-300 transform hover:scale-110" href="#" aria-label="Snapchat">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.404-5.965 1.404-5.965s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.222.083.345-.09.375-.293 1.199-.334 1.363-.052.225-.174.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-12.013C24.007 5.367 18.641.001 12.017.001z"/>
+                </svg>
+              </a> */}
+              
+              {/* Instagram */}
+              <a className="social-icon text-[#4B5563] hover:text-[#E4405F] transition-all duration-300 transform hover:scale-110" href="#" aria-label="Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 256 256" fill="currentColor">
                   <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z" />
                 </svg>
               </a>
-              <a className="text-[#4B5563] hover:text-[#1C161F] transition-colors" href="#" aria-label="Facebook">
+              
+              {/* Facebook */}
+              <a className="social-icon text-[#4B5563] hover:text-[#1877F2] transition-all duration-300 transform hover:scale-110" href="#" aria-label="Facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 256 256" fill="currentColor">
-                  <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z" />
+                  <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0-16h24v63.63a88,88,0,1,1,16,0Z" />
                 </svg>
               </a>
             </div>
@@ -560,7 +532,34 @@ const Footer = () => {
     </footer>
   );
 };
+const additionalCSS = `
+.social-icon {
+  position: relative;
+  padding: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
+.social-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* App Store buttons enhanced styling */
+.app-store-btn {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.app-store-btn:hover {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1));
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+`;
 // Main App Component
 const App = () => {
   const [activeSection, setActiveSection] = useState('');
@@ -636,7 +635,6 @@ const App = () => {
           <HeroSection />
           <FeaturesSection />
           <WhyKalrySection />
-          <PromoSection />
           <TestimonialsSection />
           <PricingSection />
           <CTASection />
